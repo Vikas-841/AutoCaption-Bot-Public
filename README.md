@@ -19,7 +19,7 @@ This Repo is Telegram Channel Code to help build a bot that automatically adds c
 
 
 ### Deploy To Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/VJBots/VJ-AutoCaption-Bot)  
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Vikas-841/AutoCaption-Bot-Public)  
 
 ### Deploy To Render 
 
