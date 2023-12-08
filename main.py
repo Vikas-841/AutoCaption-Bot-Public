@@ -1,6 +1,6 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# Don't Remove Credit @VG_Botz
+# Subscribe YouTube Channel For Amazing Bot @VG_DEVELOPER
+# Ask Doubt on telegram @tanjiro_x_coder
 
 import pyrogram, os, asyncio
 
@@ -14,36 +14,36 @@ try: custom_caption = os.environ.get("custom_caption", """
 <b>{file_name} ~ @missqueenbotx</b>""")
 except Exception as custom_caption: print(f"⚠️ Custom Caption Invalid {custom_caption}")
 
-AutoCaptionBotV1 = pyrogram.Client(
-   name="AutoCaptionBotV1", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
+VIKAS = pyrogram.Client(
+   name="VIKAS", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
 
 start_message = """
 <b>👋Hello {}</b>
 <b>I am an AutoCaption bot</b>
 <b>All you have to do is add me to your channel and I will show you my power</b>
-<b>Maintained By : @missqueenbotx</b>"""
+<b>Maintained By : @VG_BOTZ</b>"""
 
 about_message = """
-<b>• Name : <a href=https://t.me/missqueenbotx>AutoCaption</a></b>
-<b>• Developer : <a href=https://t.me/missqueenbotx>Missqueenbotx</a></b>
+<b>• Name : <a href=https://t.me/TEAMS_VG>AutoCaption</a></b>
+<b>• Developer : <a href=https://t.me/VG_BOTZ>Missqueenbotx</a></b>
 <b>• Language : Python3</b>
 <b>• Library : Pyrogram v{version}</b>
-<b>• Updates : <a href=https://t.me/missqueenbotx>Click Here</a></b>"""
+<b>• Updates : <a href=https://t.me/VG_BOTZ>Click Here</a></b>"""
 
-@AutoCaptionBotV1.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
+@VIKAS.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
 def start_command(bot, update):
   update.reply(start_message.format(update.from_user.mention), reply_markup=start_buttons(bot, update), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@AutoCaptionBotV1.on_callback_query(pyrogram.filters.regex("start"))
+@VIKAS.on_callback_query(pyrogram.filters.regex("start"))
 def strat_callback(bot, update):
   update.message.edit(start_message.format(update.from_user.mention), reply_markup=start_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@AutoCaptionBotV1.on_callback_query(pyrogram.filters.regex("about"))
+@VIKAS.on_callback_query(pyrogram.filters.regex("about"))
 def about_callback(bot, update): 
   bot = bot.get_me()
   update.message.edit(about_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=about_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@AutoCaptionBotV1.on_message(pyrogram.filters.channel)
+@VIKAS.on_message(pyrogram.filters.channel)
 def edit_caption(bot, update: pyrogram.types.Message):
   motech, _ = get_file_details(update)
   try:
@@ -77,7 +77,7 @@ def get_file_details(update: pyrogram.types.Message):
 def start_buttons(bot, update):
   bot = bot.get_me()
   buttons = [[
-   pyrogram.types.InlineKeyboardButton("Updates", url="https://t.me/missqueenbotx"),
+   pyrogram.types.InlineKeyboardButton("Updates", url="https://t.me/VG_BOTZ"),
    pyrogram.types.InlineKeyboardButton("About 🤠", callback_data="about")
    ],[
    pyrogram.types.InlineKeyboardButton("➕️ Add To Your Channel ➕️", url=f"http://t.me/{bot.username}?startchannel=true")
@@ -91,10 +91,10 @@ def about_buttons(bot, update):
   return pyrogram.types.InlineKeyboardMarkup(buttons)
 
 print("Telegram AutoCaption V1 Bot Start")
-print("Bot Created By https://t.me/missqueenbotx")
+print("Bot Created By https://t.me/VG_BOTZ")
 
-AutoCaptionBotV1.run()
+VIKAS.run()
 
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# Don't Remove Credit @VG_Botz
+# Subscribe YouTube Channel For Amazing Bot @VG_DEVELOPER
+# Ask Doubt on telegram @tanjiro_x_coder
